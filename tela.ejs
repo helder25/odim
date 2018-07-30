@@ -25,21 +25,6 @@
                     }
                     $('#confir-qtd').prop('disabled', true);
                     $('#quantidade').prop('disabled', true);
-                    $('#btn-salvar').click(function(){
-                    var formDara = new FormData();
-
-                    var nomePesquisa = document.getElementById("nome").value;
-                    var cidade = document.getElementById("cidade").value;
-                    var y = document.getElementById("quantidade").value;
-                    var arrayPrefeitos = [];
-                    //neste for não estou conseguindo pegar o valor dos inputs pelo id para atribuir a var a
-                    for(var i=0; i<y; i++){
-                        a = $('#cand'+i).val();
-                        console.log("aqui: "+a);
-                    }
-                    
-
-                });
                 });
             });
         </script>
@@ -54,9 +39,9 @@
                     var y = document.getElementById("quantidade").value;
                     var arrayPrefeitos = [];
                     for(var i=0; i<y; i++){
-                        a = $('#cand'+i).val();
+                        arrayPrefeitos[i] = $('#cand'+i).val();
                     }
-                    console.log("aqui: "+a);
+                    console.log("aqui: "+arrayPrefeitos[i]);
 
                 });
             });
